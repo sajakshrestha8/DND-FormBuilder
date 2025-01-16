@@ -10,18 +10,8 @@ import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const App = () => {
-  // const [formChange, setFormChange] = useState([]);
-
   const [formFields, setFormFields] = useState([]);
   const [formData, setFormData] = useState({});
-
-  // const handleFieldValueChange = (name, value) => {
-  //   setFormData({ ...formData, [name]: value });
-  // };
-
-  // function handleformChange(updateForm) {
-  //   setFormChange(updateForm);
-  // }
 
   const formComponents = [
     {

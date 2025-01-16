@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { memo } from "react";
 import { useDrop } from "react-dnd";
 
 import "./DropArea.css";
 import { nanoid } from "nanoid";
 import ItemTypes from "../../Constants";
-import { Button, InputFeild, Select, RadioButton } from "../../Components";
+import { Select, RadioButton } from "../../Components";
 
 const DropArea = ({
   isPreview = false,
@@ -13,9 +13,10 @@ const DropArea = ({
   formData,
   setFormData,
 }) => {
-  const [collectedIcon, drop] = useDrop(
+  const [_, drop] = useDrop(
     () => ({
       accept: ItemTypes.CARD,
+      canDrop: (props, monitor) => !isPreview,
       drop: (data) => {
         setFormFields([...formFields, { ...data.item, name: nanoid() }]);
       },
@@ -90,7 +91,7 @@ const DropArea = ({
     <div ref={drop} className="dropArea-field">
       {formFields.length === 0 ? (
         <div className="label-wrapper">
-          <label>Drag and drop the Form Element here</label>
+          {!isPreview && <label>Drag and drop the Form Element here</label>}
         </div>
       ) : (
         <form
@@ -107,13 +108,17 @@ const DropArea = ({
               </div>
             );
           })}
-          {isPreview && <button type="submit">Submit</button>}
-
-          {JSON.stringify(formData)}
+          {isPreview && (
+            <div className="btn-wrapper">
+              <button className="button" type="submit">
+                Submit
+              </button>
+            </div>
+          )}
         </form>
       )}
     </div>
   );
 };
 
-export default DropArea;
+export default memo(DropArea);
