@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jura:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap');
+
+*{
+    font-family: "Poppins", serif;  
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+.wrapper{
+
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-rows: 1fr;
+    
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.preview{
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-elements{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    height: calc(100vh - 20px);
+}
+
+.form-element-component{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.element{
+    width: 90%;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.heading{
+    font-size: 20px;
+}
+
