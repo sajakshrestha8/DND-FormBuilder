@@ -7,7 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-
 # Form Builder
 
 A drag-and-drop form builder that allows users to create custom forms, preview them, and generate form JSON schema. The form builder supports various input types, form validation, and component reordering with drag-and-drop functionality.
@@ -51,3 +50,7 @@ npm run dev
 
 ```
 this will start the app and open it in your browser at http://localhost:5173
+
+# Preview
+![image](https://github.com/user-attachments/assets/1940f574-926e-4693-9ea9-ae3efd1d4934)
+
